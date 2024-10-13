@@ -1,0 +1,32 @@
+.dashboard-container {
+    padding: 2rem;
+}
+
+.overview-cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.overview-card {
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: #333;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.overview-card h3 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.overview-card h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.overview-card p {
+    color: #999;
+}

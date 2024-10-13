@@ -1,0 +1,23 @@
+.financial-overview {
+    margin-bottom: 2rem;
+}
+
+.financial-overview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.financial-overview table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.financial-overview th, .financial-overview td {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+}
+
+.financial-overview th {
+    background-color: #f8f8f8;
+    text-align: left;
+}

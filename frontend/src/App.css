@@ -1,0 +1,166 @@
+/* src/styles/App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed sidebar */
+  top: 0;
+  left: 0;
+  background-color: #2c3e50; /* Dark background */
+  color: white;
+  padding: 20px;
+  transition: width 0.3s; /* Smooth transition for width */
+}
+
+.sidebar h2 {
+  color: #ecf0f1; /* Lighter color for headings */
+}
+
+/* Dashboard Styles */
+.dashboard {
+  margin-left: 250px; /* Leave space for sidebar */
+  padding: 20px;
+  flex-grow: 1; /* Allow it to grow */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Space below header */
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 40px; /* Avatar size */
+  height: 40px;
+  border-radius: 50%; /* Round avatar */
+  margin-right: 10px; /* Space between avatar and name */
+}
+
+/* Card Styles */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background-color: #ffffff; /* White background */
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1; /* Equal flex for all cards */
+  min-width: 200px; /* Minimum width for responsiveness */
+}
+
+/* Overview Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Space above table */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1f1f1; /* Light gray background for header */
+}
+
+/* Control Button Styles */
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  display: flex; /* Align icon and text */
+  align-items: center;
+}
+
+button {
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Transition for hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Collapse sidebar on small screens */
+  }
+
+  .sidebar h2 {
+    display: none; /* Hide title in collapsed mode */
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar li {
+    justify-content: center; /* Center items */
+  }
+
+  .dashboard {
+    margin-left: 60px; /* Adjust margin for collapsed sidebar */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards */
+    align-items: center; /* Center align */
+  }
+
+  .card {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .header {
+    flex-direction: column; /* Stack header items */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .header .user-info {
+    margin-top: 10px; /* Space above user info */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none; /* Hide sidebar on very small screens */
+  }
+
+  .dashboard {
+    margin-left: 0; /* No margin for small screens */
+  }
+}
