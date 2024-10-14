@@ -1,19 +1,14 @@
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const apiRoutes = require('./routes/api');
+app = express()
+const router = express.Router();
+const dataController = require('./controllers/dataController');
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+router.get('/properties', dataController.getProperties);
+router.get('/occupancy', dataController.getOccupancyData);
+router.get('/financial', dataController.getFinancialData);
 
-app.use(cors({
-  origin: 'http://localhost:3000', // Allow frontend running on port 3000
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-  credentials: true, // Enable cookies if needed
-}));
-app.use(bodyParser.json());
-app.use('/api', apiRoutes);
+module.exports = router;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+router.get('/', (req, res) => {
+    res.send('App is running...')
+})

@@ -19,6 +19,10 @@ export const DataProvider = ({ children }) => {
             const propertiesResponse = await axios.get('http://localhost:5000/api/properties');
             const occupancyResponse = await axios.get('http://localhost:5000/api/occupancy');
             const financialResponse = await axios.get('http://localhost:5000/api/financial');
+            
+            // const propertiesResponse = await axios.get('https://mellifluous-praline-0f3e85.netlify.app/api/properties');
+            // const occupancyResponse = await axios.get('https://mellifluous-praline-0f3e85.netlify.app/api/occupancy');
+            // const financialResponse = await axios.get('https://mellifluous-praline-0f3e85.netlify.app/api/financial');
             setOccupancyData(occupancyResponse.data);
             setFinancialData(financialResponse.data);
             setPropertyData(propertiesResponse.data)
